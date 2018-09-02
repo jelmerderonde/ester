@@ -1,47 +1,101 @@
 @charset "utf-8";
 
+@import "./css/normalize.css";
+
 // Import Mukta font
 @import url('https://fonts.googleapis.com/css?family=Mukta:200,400');
 
 // Colors
 $radical-red: #FF3C5B;
+$cerise: #E9415D;
+$pure-white: #FFFFFF;
 
 // Global variables
 $family-sans-serif: "Mukta", sans-serif;
-$primary: $radical-red;
-$widescreen-enabled: false;
-$fullhd-enabled: false;
+$primary: $cerise;
+$background: $pure-white;
 
-// Navbar modifications
-.navbar-menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+* {
+  font-family: $family-sans-serif;
 }
 
-.navbar-center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+body {
+  background-color: $background;
 }
 
-a.navbar-item {
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+// Header
+
+.header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+// Navbar
+
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.navbar a {
   font-weight: 200;
   font-size: 15pt;
   letter-spacing: 0.08rem;
-  padding: 0;
-  margin: .5rem .75rem;
-  border-bottom: 2px solid white;
+  margin: 0.75rem 0.5rem;
+  padding-bottom: 1px;
+  border-bottom: 2px solid $background;
 }
 
-a.navbar-item.is-active {
+.navbar a.is-active {
   border-bottom: 2px solid $primary;
 }
 
-.navbar-item.logo {
-  padding: .5rem 0;
-  margin: 0 .75rem;
+.navbar .logo {
+  margin: 0.9rem 0.5rem;
   border-bottom: 4px solid $primary;
 }
 
-@import "./sass/bulma/bulma.sass";
+// Grid
+
+.flex-grid {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 400px) {
+  .flex-grid {
+    display: block;
+    .col {
+      width: 100%;
+      margin: 0 0 10px 0;
+    }
+  }
+}
+
+.flex-grid .col {
+  width: 32%;
+}
+
+.flex-grid:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.grid-item {
+  background: $primary;
+  margin-bottom: 20px;
+}
+
+.grid-item--a { height:  80px; }
+.grid-item--b { height: 140px; }
+.grid-item--c { height: 300px; }
