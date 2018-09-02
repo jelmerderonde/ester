@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+// Import Mukta font
+@import url('https://fonts.googleapis.com/css?family=Mukta:200,400');
+
+// Colors
+$radical-red: #FF3C5B;
+
+// Global variables
+$family-sans-serif: "Mukta", sans-serif;
+$primary: $radical-red;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+// Navbar modifications
+.navbar-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navbar-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+a.navbar-item {
+  font-weight: 200;
+  font-size: 15pt;
+  letter-spacing: 0.08rem;
+  padding: 0;
+  margin: .5rem .75rem;
+  border-bottom: 2px solid white;
+}
+
+a.navbar-item.is-active {
+  border-bottom: 2px solid $primary;
+}
+
+.navbar-item.logo {
+  padding: .5rem 0;
+  margin: 0 .75rem;
+  border-bottom: 4px solid $primary;
+}
+
+@import "./sass/bulma/bulma.sass";
