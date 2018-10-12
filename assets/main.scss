@@ -346,14 +346,12 @@ template {
 @import url('https://fonts.googleapis.com/css?family=Mukta:200,400');
 
 // Colors
-$radical-red: #FF3C5B;
-$cerise: #E9415D;
 $pure-white: #FFFFFF;
-$green: #194B41;
+$msu-green: #194B41;
 
 // Global variables
 $family-sans-serif: "Mukta", sans-serif;
-$primary: $cerise;
+$primary: $msu-green;
 $background: $pure-white;
 
 * {
@@ -402,7 +400,6 @@ a {
 
 .navbar .logo {
   margin: 0.9rem 0.5rem;
-  border-bottom: 4px solid $primary;
 }
 
 // Grid
@@ -457,10 +454,47 @@ a {
 }
 
 .grid-item {
-  background: $primary;
+  position: relative;
+  line-height: 0;
   margin-bottom: 20px;
-}
+  img {
+    width: 100%;
+  }
+  .grid-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    box-sizing: border-box;
 
-.grid-item--a { height:  80px; }
-.grid-item--b { height: 140px; }
-.grid-item--c { height: 300px; }
+    opacity: 0;
+
+    padding: 15px;
+
+    line-height: 1.15;
+    color: $pure-white;
+    background-color: $primary;
+
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+      transition: opacity .55s ease-in-out;
+      -moz-transition: opacity .55s ease-in-out;
+      -webkit-transition: opacity .55s ease-in-out;
+    }
+
+    h2 {
+      text-transform: lowercase;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-weight: 200;
+    }
+  }
+}
