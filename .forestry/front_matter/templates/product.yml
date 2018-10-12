@@ -12,3 +12,5 @@ fields:
 - type: file
   label: Afbeelding
   name: image
+pages:
+- content/product/oorbellen.md
