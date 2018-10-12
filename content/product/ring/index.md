@@ -1,6 +1,6 @@
 +++
-title = "Ring"
 image = "images/product/ring.png"
-+++
+title = "Ring"
 
-Een mooie ring
++++
+De mooiste ring
