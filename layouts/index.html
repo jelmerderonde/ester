@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <title>Ester</title>
-    {{ $style := resources.Get "main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
+    {{ $style := resources.Get "main.scss" | resources.ToCSS $options | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
   </head>
   <body>
@@ -10,8 +11,8 @@
       <div class="logo">
         <svg width="120" height="120" x="0px" y="0px" viewBox="0 0 182.3 189.4" style="enable-background:new 0 0 182.3 189.4;" xml:space="preserve">
           <style type="text/css">
-  	         .st0{fill:none;stroke:#FF3C5B;stroke-width:2;stroke-miterlimit:10;}
-  	         .st1{fill:#FFFFFF;stroke:#FF3C5B;stroke-width:2;stroke-miterlimit:10;}
+  	         .st0{fill:none;stroke:#194B41;stroke-width:2;stroke-miterlimit:10;}
+  	         .st1{fill:#FFFFFF;stroke:#194B41;stroke-width:2;stroke-miterlimit:10;}
           </style>
           <g>
           	<circle class="st0" cx="78.1" cy="94.7" r="67.5"/>
@@ -38,35 +39,17 @@
     </div>
 
     <div class="grid-container">
-      <div class="flex-grid" data-colcade="columns: .col, items: .grid-item">
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
+      <div class="grid" data-colcade="columns: .grid-col, items: .grid-item">
+        <div class="grid-col"></div>
+        <div class="grid-col grid-col--2"></div>
+        <div class="grid-col grid-col--3"></div>
 
-        <div class="grid-item grid-item--b"></div>
-        <div class="grid-item grid-item--a"></div>
-        <div class="grid-item grid-item--c"></div>
-        <div class="grid-item grid-item--a"></div>
-        <div class="grid-item grid-item--a"></div>
-        <div class="grid-item grid-item--b"></div>
-        <div class="grid-item grid-item--c"></div>
-        <div class="grid-item grid-item--b"></div>
-        <div class="grid-item grid-item--a"></div>
-        <div class="grid-item grid-item--c"></div>
-        <div class="grid-item grid-item--a"></div>
-        <div class="grid-item grid-item--a"></div>
-        <div class="grid-item grid-item--b"></div>
-        <div class="grid-item grid-item--c"></div>
-        <div class="grid-item grid-item--b"></div>
-        <div class="grid-item grid-item--a"></div>
-        <div class="grid-item grid-item--c"></div>
-        <div class="grid-item grid-item--a"></div>
-        <div class="grid-item grid-item--a"></div>
-        <div class="grid-item grid-item--b"></div>
-        <div class="grid-item grid-item--c"></div>
+        {{ range .Pages }}
+          {{ .Render "grid-item"}}
+        {{ end }}
+
       </div>
     </div>
-
     {{ $colcade := resources.Get "js/colcade.js" }}
     <script type="text/javascript" src="{{ $colcade.Permalink }}"></script>
 
