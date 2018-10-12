@@ -1,0 +1,16 @@
+---
+label: product
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: Titel
+  name: title
+  description: De titel wordt weergegeven op de homepage en bij de productpagina
+  config:
+    required: true
+- type: file
+  label: Afbeelding
+  name: image
+pages:
+- content/product/oorbellen.md
