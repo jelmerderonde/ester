@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+	<meta name="generator" content="Hugo 0.47.1" />
     <title>Ester</title>
-    {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
-    {{ $style := resources.Get "main.scss" | resources.ToCSS $options | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    
+    
+    <link rel="stylesheet" href="//localhost:1313/main.836196bea4ddfea25468a3dab097d3b68547935e015e4d43b70655550b7f84cd.css">
   </head>
   <body>
     <div class="header">
@@ -31,7 +32,7 @@
         <a class="is-active" href="#">sieraden</a>
         <a href="#">winkel</a>
         <div class="logo">
-          <img height="30rem" src={{ "images/logo.png" | relURL }} />
+          <img height="30rem" src=/images/logo.png />
         </div>
         <a href="#">over ester</a>
         <a href="#">contact</a>
@@ -44,14 +45,12 @@
         <div class="grid-col grid-col--2"></div>
         <div class="grid-col grid-col--3"></div>
 
-        {{ range .Pages }}
-          {{ .Render "grid-item"}}
-        {{ end }}
+        
 
       </div>
     </div>
-    {{ $colcade := resources.Get "js/colcade.js" }}
-    <script type="text/javascript" src="{{ $colcade.Permalink }}"></script>
+    
+    <script type="text/javascript" src="//localhost:1313/js/colcade.js"></script>
 
   </body>
 </html>
