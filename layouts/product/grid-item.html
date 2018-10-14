@@ -1,7 +1,7 @@
 <div class="grid-item">
   <img src="{{ .Params.image }}" />
   <div class="grid-hover">
-    <h2>{{ .Params.title }}</h2>
+    <a href="{{.Permalink}}"><h2>{{.Title}}</h2></a>
     {{ .Content }}
   </div>
 </div>

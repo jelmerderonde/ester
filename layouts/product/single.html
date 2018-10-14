@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<div class="product-container">
+  <div class="product-images">
+    <img src="{{ .Params.image }}" />
+    <img src="{{ .Params.image }}" />
+  </div>
+  <div class="product-description">
+    <h1>{{ .Title }}</h1>
+    {{ .Content }}
+    <table>
+      <tr>
+        <th>materiaal:</th><td>{{ .Params.material }}</td>
+      </tr>
+      <tr>
+        <th>prijs:</th><td>{{ .Params.price }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+{{ end }}
