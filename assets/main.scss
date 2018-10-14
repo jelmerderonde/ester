@@ -565,6 +565,8 @@ $grid-gutter: 10px;
 
     padding: 15px;
 
+    cursor: pointer;
+
     line-height: 1.15;
     color: $pure-white;
     background-color: $primary;
@@ -580,7 +582,7 @@ $grid-gutter: 10px;
       -webkit-transition: opacity .55s ease-in-out;
     }
 
-    a h2 {
+    h2 {
       color: $pure-white;
       text-transform: lowercase;
       margin-bottom: 20px;
