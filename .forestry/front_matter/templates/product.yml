@@ -9,6 +9,17 @@ fields:
   description: De titel wordt weergegeven op de homepage en bij de productpagina
   config:
     required: true
+- type: text
+  label: Materiaal
+  name: material
+  config:
+    required: true
+- type: number
+  name: price
+  label: Prijs
+  config:
+    min: '0'
+    required: true
 - type: file
   label: Afbeelding
   name: image
