@@ -24,5 +24,4 @@ fields:
   label: Afbeelding
   name: image
 pages:
-- content/over-ester.md
 - content/product/oorbellen.md
