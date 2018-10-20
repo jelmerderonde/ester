@@ -494,6 +494,36 @@ a {
 
 }
 
+// About page
+
+.about-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+
+
+  margin-bottom: 20px;
+}
+
+.about-text {
+  width: 100px;
+  flex: 1 1;
+
+  background-color: $primary;
+  color: $pure-white;
+}
+
+.about-image {
+  width: 100px;
+  flex: 1 1;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 // Grid
 
 .grid-container {

@@ -35,14 +35,15 @@
           <div class="logo">
             <img height="30rem" src={{ "images/logo.png" | relURL }} />
           </div>
-          <a href="#">over ester</a>
+          <a href="{{ .Site.BaseURL }}over-ester">over ester</a>
           <a href="#">contact</a>
         </nav>
       </div>
+
       {{ block "main" . }}
 
       {{ end }}
-
+      
       <div class="footer">
         <div class="footer-box">
           © 2018 Ester Renkema
