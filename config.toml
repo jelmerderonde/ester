@@ -1,1 +1,26 @@
 baseUrl = "//jelmerderonde.github.io/ester/"
+
+[menu]
+  [[menu.main]]
+  identifier = "sieraden"
+  name       = "sieraden"
+  url        = "/"
+  weight     = 1
+
+  [[menu.main]]
+  identifier = "over-ester"
+  name       = "over ester"
+  url        = "/over-ester/"
+  weight     = 2
+
+  [[menu.main]]
+  identifier = "logo"
+  name       = "logo"
+  url        = "/"
+  weight     = 3
+
+  [[menu.main]]
+  identifier = "contact"
+  name       = "contact"
+  url        = "#"
+  weight     = 4

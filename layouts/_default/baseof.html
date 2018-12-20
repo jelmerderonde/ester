@@ -6,6 +6,9 @@
     {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $style := resources.Get "main.scss" | resources.ToCSS $options | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="YjI1YTA2MjQtMGU3ZC00ZmY4LTllNzQtNmVlODVjYTg3MmIxNjM2ODA4OTQxMjU1ODAyMTM5"></script>
+    <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
     <div class="container">
@@ -29,21 +32,14 @@
           </svg>
         </div>
 
-        <nav class="navbar">
-          <a class="is-active" href="{{ .Site.BaseURL }}">sieraden</a>
-          <a href="#">winkel</a>
-          <div class="logo">
-            <img height="30rem" src={{ "images/logo.png" | relURL }} />
-          </div>
-          <a href="{{ .Site.BaseURL }}over-ester">over ester</a>
-          <a href="#">contact</a>
-        </nav>
+        {{ partial "navbar.html" . }}
+
       </div>
 
       {{ block "main" . }}
 
       {{ end }}
-      
+
       <div class="footer">
         <div class="footer-box">
           © 2018 Ester Renkema

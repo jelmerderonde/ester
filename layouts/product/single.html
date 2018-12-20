@@ -16,6 +16,14 @@
         <th>prijs:</th><td>{{ .Params.price }}</td>
       </tr>
     </table>
+    <button
+      class="snipcart-add-item"
+      data-item-id="2"
+      data-item-name="{{ .Params.title }}"
+      data-item-price="{{ .Params.price }}"
+      data-item-url="{{ .Permalink }}">
+        Ik wil dit sierraad kopen
+    </button>
   </div>
 </div>
 
