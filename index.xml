@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home sweet home on </title>
+    <title></title>
     <link>//jelmerderonde.github.io/ester/</link>
-    <description>Recent content in Home sweet home on </description>
+    <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 12 Oct 2018 10:25:11 +0000</lastBuildDate>
     
 	<atom:link href="//jelmerderonde.github.io/ester/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title></title>
+      <link>//jelmerderonde.github.io/ester/over-ester/</link>
+      <pubDate>Fri, 12 Oct 2018 10:25:11 +0000</pubDate>
+      
+      <guid>//jelmerderonde.github.io/ester/over-ester/</guid>
+      <description>Hoi, ik ben Ester, Etur moluptur rem as exernam re sus, tenime ipsam fugitasped maio erovit illacide optatum faccupt assequi omnimust aspe delitincia nusdae aut entibusanda conecti cupti. etur moluptur rem as exernam re sus, tenime ipsam fugitasped maio erovit illacide optatum faccupt assequi omnimust aspe delitincia nusdae aut entibusanda conecti cupti. nusdae aut entibusanda conecti cupti. etur moluptur rem as exernam re sus, tenime ipsam fugitasped maio.</description>
+    </item>
     
     <item>
       <title>Oorbellen</title>
