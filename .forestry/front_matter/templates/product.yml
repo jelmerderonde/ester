@@ -22,5 +22,8 @@ fields:
 - type: file
   label: Afbeelding
   name: image
+- type: image_gallery
+  name: extra-images
+  label: Extra afbeeldingen
 pages:
 - content/product/oorbellen.md
