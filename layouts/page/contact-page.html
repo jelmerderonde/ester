@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <div class="contact-container">
+    <div class="contact-image">
+      <img src="{{ .Params.image }}" />
+    </div>
+    <div class="contact-text">
+      {{ .Content }}
+    </div>
+  </div>
+{{ end }}

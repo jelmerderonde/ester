@@ -343,7 +343,7 @@ template {
 }
 
 // Import Mukta font
-@import url('https://fonts.googleapis.com/css?family=Mukta:200,400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Mukta:200,400,500');
 
 // Colors
 $pure-white: #FFFFFF;
@@ -351,12 +351,18 @@ $msu-green: #194B41;
 
 // Global variables
 $family-sans-serif: "Mukta", sans-serif;
+$font-weight: 200;
 $primary: $msu-green;
 $background: $pure-white;
 $text-padding: 10px 20px 10px 30px;
 
 * {
   font-family: $family-sans-serif;
+  font-weight: $font-weight;
+}
+
+h1 {
+  font-weight: 500;
 }
 
 // Animations
@@ -456,7 +462,6 @@ a {
 }
 
 .navbar a {
-  font-weight: 200;
   font-size: 3.2vw;
   @media ( min-width: 500px ) {
     font-size: 15pt;
@@ -485,6 +490,10 @@ a {
 
     border-radius: 50%;
     border: 1px solid $primary;
+  }
+
+  .snipcart-summary-empty {
+    display: none;
   }
 
 }
@@ -516,6 +525,17 @@ a {
   .footer-box {
     margin-top: 30px;
     margin-bottom: 60px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+
+    height: 80px;
+
+    input {
+      border: 2px solid $primary;
+      padding: 3px 30px 3px 5px;
+    }
   }
 }
 
@@ -528,12 +548,12 @@ a {
   display: flex;
   flex-flow: column nowrap;
 
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   @media ( min-width: 500px ) {
     display: flex;
     flex-flow: row nowrap;
-    height: 500px;
+    height: 800px;
   }
 }
 
@@ -576,12 +596,10 @@ a {
   background-color: $primary;
 
   h1 {
-    font-weight: 300;
   }
 
   p {
     font-size: 1.1rem;
-    font-weight: 200;
     letter-spacing: 0.06rem;
     line-height: 1.5;
   }
@@ -589,14 +607,13 @@ a {
   table {
     text-align: left;
     font-size: 1.1rem;
-    font-weight: 200;
     letter-spacing: 0.06rem;
 
   }
 
   th {
     width: 65%;
-    font-weight: bold;
+    font-weight: 400;
 
   }
 }
@@ -624,34 +641,69 @@ button.snipcart-add-item {
 }
 
 .about-text {
-  flex: 1;
+  flex: 1 1 50%;
 
   background-color: $primary;
   color: $pure-white;
 
   box-sizing: border-box;
-  //padding: 10px 0 10px 0;
   padding: $text-padding;
 
   h1 {
-    font-weight: 500;
   }
 
   p {
     font-size: 1.1rem;
-    font-weight: 100;
     letter-spacing: 0.05rem;
     line-height: 1.3;
   }
 }
 
 .about-image {
-  flex: 1;
+  flex: 1 1 50%;
   img {
     width: 100%;
     height: 100%;
   }
 }
+
+// Contact
+
+.contact-container {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 30px;
+}
+
+.contact-text {
+  flex: 1 1 50%;
+
+  background-color: $primary;
+  color: $pure-white;
+
+  box-sizing: border-box;
+  padding: $text-padding;
+
+  h1 {
+  }
+
+  p {
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.3;
+  }
+}
+
+.contact-image {
+  flex: 1 1 50%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 
 // Grid
 
@@ -704,7 +756,7 @@ $grid-gutter: 10px;
 .grid-item {
   position: relative;
   line-height: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
 	-webkit-animation: fade-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: fade-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -747,11 +799,6 @@ $grid-gutter: 10px;
     h2 {
       color: $pure-white;
       text-transform: lowercase;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-weight: 200;
     }
   }
 }

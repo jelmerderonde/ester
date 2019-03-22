@@ -22,5 +22,5 @@ baseUrl = "//jelmerderonde.github.io/ester/"
   [[menu.main]]
   identifier = "contact"
   name       = "contact"
-  url        = "#"
+  url        = "/contact/"
   weight     = 4
