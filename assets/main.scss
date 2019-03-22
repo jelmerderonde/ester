@@ -343,7 +343,7 @@ template {
 }
 
 // Import Mukta font
-@import url('https://fonts.googleapis.com/css?family=Mukta:200,400');
+@import url('https://fonts.googleapis.com/css?family=Mukta:200,400,500,600');
 
 // Colors
 $pure-white: #FFFFFF;
@@ -353,7 +353,7 @@ $msu-green: #194B41;
 $family-sans-serif: "Mukta", sans-serif;
 $primary: $msu-green;
 $background: $pure-white;
-$text-padding: 10px 20px 10px 20px;
+$text-padding: 10px 20px 10px 30px;
 
 * {
   font-family: $family-sans-serif;
@@ -443,6 +443,7 @@ a {
 
 .navbar img {
   height: 1.2rem;
+  margin: 0 1rem;
 
   @media ( min-width: 500px ) {
     height: 2rem;
@@ -466,7 +467,7 @@ a {
   }
 
   letter-spacing: 0.08rem;
-  margin: 0.75rem 0.5rem;
+  margin: 0.75rem 1.5rem;
   padding-bottom: 1px;
   border-bottom: 2px solid $background;
   position: relative;
@@ -489,7 +490,7 @@ a {
 }
 
 .navbar a.is-active, a:hover {
-  border-bottom: 2px solid $primary;
+  border-bottom: 1px solid $primary;
 }
 
 .navbar .logo {
@@ -506,14 +507,15 @@ a {
   justify-content: space-around;
   align-items: flex-start;
 
-  border-top: 3px solid $primary;
+  border-top: 1px solid $primary;
 
 
   color: $primary;
   font-size: 1.3rem;
 
   .footer-box {
-    margin-top: 15px;
+    margin-top: 30px;
+    margin-bottom: 60px;
   }
 }
 
@@ -574,24 +576,28 @@ a {
   background-color: $primary;
 
   h1 {
-    font-weight: 200;
+    font-weight: 300;
   }
 
   p {
     font-size: 1.1rem;
     font-weight: 200;
-    letter-spacing: 0.05rem;
-    line-height: 1.3;
+    letter-spacing: 0.06rem;
+    line-height: 1.5;
   }
 
   table {
     text-align: left;
+    font-size: 1.1rem;
     font-weight: 200;
+    letter-spacing: 0.06rem;
+
   }
 
   th {
     width: 65%;
     font-weight: bold;
+
   }
 }
 
@@ -602,6 +608,9 @@ button.snipcart-add-item {
   color: white;
   border: none;
   cursor: pointer;
+
+  font-size: 1.1rem;
+  letter-spacing: 0.06rem;
 }
 
 // About page
@@ -611,7 +620,7 @@ button.snipcart-add-item {
   display: flex;
   justify-content: space-between;
 
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .about-text {
@@ -625,12 +634,12 @@ button.snipcart-add-item {
   padding: $text-padding;
 
   h1 {
-    font-weight: 200;
+    font-weight: 500;
   }
 
   p {
     font-size: 1.1rem;
-    font-weight: 200;
+    font-weight: 100;
     letter-spacing: 0.05rem;
     line-height: 1.3;
   }
