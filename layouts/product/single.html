@@ -3,7 +3,9 @@
 <div class="product-container">
   <div class="product-images">
     <img src="{{ .Params.image }}" />
-    <img src="{{ .Params.image }}" />
+    {{ range .Params.extra_images }}
+      <img src="{{ . }}" />
+    {{ end }}
   </div>
   <div class="product-description">
     <h1>{{ .Title }}</h1>
