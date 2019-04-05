@@ -2,12 +2,13 @@
 
 <div class="product-container">
   <div class="product-images">
-    <img src="{{ .Params.image }}" />
+    <img class="product-image" src="{{ .Params.image }}" />
     {{ range .Params.extra_images }}
-      <img src="{{ . }}" />
+      <img class="product-image" src="{{ . }}" />
     {{ end }}
   </div>
   <div class="product-description">
+    <a class="close" href="javascript:history.back()"><img src={{ "images/icon_close.svg" | relURL }} /></a>
     <h1>{{ .Title }}</h1>
     {{ .Content }}
     <table>
@@ -24,6 +25,7 @@
       data-item-name="{{ .Params.title }}"
       data-item-price="{{ .Params.price }}"
       data-item-url="{{ .Permalink }}">
+        <img src={{ "images/icon_buy.svg" | relURL }} />
         Ik wil dit sierraad kopen
     </button>
   </div>
