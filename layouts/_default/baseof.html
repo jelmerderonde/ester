@@ -28,5 +28,14 @@
       {{ partial "footer.html" . }}
 
     </div>
+    <script type="text/javascript">
+      $("#hamburger").click(function(){
+        $("#navbar-menu").show();
+      });
+
+      $("#mobile-menu-close").click(function(){
+        $("#navbar-menu").hide();
+      });
+    </script>
   </body>
 </html>

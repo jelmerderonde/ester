@@ -442,29 +442,102 @@ a {
 
 .navbar {
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
-  align-items: baseline;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: relative;
+
+  @media ( min-width: 500px ) {
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+
+.navbar #hamburger {
+  display: block;
+
+  margin: 0;
+  pagging: 0;
+
+  top: 40px;
+
+  cursor: pointer;
+
+  img {
+    height: 30px;
+    margin: 0;
+  }
+
+  @media ( min-width: 500px ) {
+    display: none;
+  }
+}
+
+.navbar #navbar-menu {
+  display: none;
+  position: absolute;
+
+  top: 57%;
+
+  width: 300px;
+
+  z-index: 9999;
+
+  .menu-box {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: $primary;
+    color: white;
+
+    padding-bottom: 45px;
+
+    a {
+      font-size: 25pt;
+
+      color: white;
+      display: inline;
+      border: none;
+    }
+
+    img#mobile-menu-close {
+      height: 30px;
+      cursor: pointer;
+
+      margin-bottom: 45px;
+    }
+  }
+
+  @media ( min-width: 500px ) {
+    display: none;
+  }
 }
 
 .navbar img {
-  height: 1.2rem;
-  margin: 0 1rem;
+  height: 3rem;
+  margin: 0.75rem 1rem;
 
   @media ( min-width: 500px ) {
-    height: 2rem;
+    margin: 0.75rem 0;
   }
 
   @media ( min-width: 768px ) {
-    height: 2rem;
+    margin: 0.75rem 0;
   }
 
 }
 
 .navbar a {
-  font-size: 3.2vw;
+  display: none;
+
   @media ( min-width: 500px ) {
     font-size: 15pt;
+    display:inline;
+    margin: 0.75rem 0.3rem;
   }
 
   @media ( min-width: 768px ) {
@@ -662,11 +735,18 @@ button.snipcart-add-item {
 // About page
 
 .about-container {
-  width: 1000px;
+  width: 100%;
+  height: auto;
   display: flex;
+  flex-flow: column nowrap;
   justify-content: space-between;
 
   margin-bottom: 30px;
+
+  @media ( min-width: 500px ) {
+    flex-flow: row nowrap;
+    height: 800px;
+  }
 }
 
 .about-text {
@@ -699,21 +779,34 @@ button.snipcart-add-item {
 // Contact
 
 .contact-container {
-  width: 1000px;
+  width: 100%;
+  height: auto;
   display: flex;
+  flex-flow: column nowrap;
   justify-content: space-between;
 
   margin-bottom: 30px;
+
+  @media ( min-width: 500px ) {
+    flex-flow: row nowrap;
+    height: 800px;
+  }
+
 }
 
 .contact-text {
   flex: 1 1 50%;
+  order: -1;
 
   background-color: $primary;
   color: $pure-white;
 
   box-sizing: border-box;
   padding: $text-padding;
+
+  @media ( min-width: 500px ) {
+    order: 0;
+  }
 
   h1 {
   }
@@ -791,7 +884,7 @@ $grid-gutter: 10px;
 	        animation: fade-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
   img {
-    //width: 100%;
+    width: 100%;
     max-width: 100%;
     height: auto;
   }

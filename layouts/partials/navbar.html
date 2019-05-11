@@ -8,4 +8,19 @@
     {{ end }}
   {{ end }}
   <a href="#" class="snipcart-checkout">winkelwagen<div class="snipcart-summary"><span class="snipcart-total-items"></span></div></a>
+  <div id="hamburger">
+    <img src={{ "images/hamburger.svg" | relURL }} />
+  </div>
+  <div id="navbar-menu">
+    <div class="menu-box">
+      <img id="mobile-menu-close" src={{ "images/icon_close.svg" | relURL }} />
+      {{ range .Site.Menus.main }}
+        {{ if eq .Identifier "logo"}}
+        {{ else }}
+          <a href="{{ .URL }}" class="{{ if eq $currentPage.RelPermalink .URL }}is-active{{ end }}">{{ .Name }}</a>
+        {{ end }}
+      {{ end }}
+      <a href="#" class="snipcart-checkout">winkelwagen<div class="snipcart-summary"><span class="snipcart-total-items"></span></div></a>
+    </div>
+  </div>
 </nav>
