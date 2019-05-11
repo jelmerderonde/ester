@@ -939,3 +939,21 @@ $grid-gutter: 10px;
     }
   }
 }
+
+// SNIPCART CUSTOMIZATION
+
+#snipcart-header.snip-header,
+#snipcart-footer.snip-footer {
+  background-color: $primary;
+  font-family: $family-sans-serif;
+  text-transform: none;
+  color: white;
+}
+
+#snipcart-sub-content .snipcart-step {
+  p.snip-product__empty {
+    font-family: $family-sans-serif;
+    text-transform: none;
+    color: black;
+  }
+}

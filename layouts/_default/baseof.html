@@ -5,10 +5,10 @@
     <title>Ester</title>
     {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true) }}
     {{ $style := resources.Get "main.scss" | resources.ToCSS $options | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="YjI1YTA2MjQtMGU3ZC00ZmY4LTllNzQtNmVlODVjYTg3MmIxNjM2ODA4OTQxMjU1ODAyMTM5"></script>
     <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
   </head>
   <body>
     <div class="container">
