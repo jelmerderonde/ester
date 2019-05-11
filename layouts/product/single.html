@@ -8,7 +8,7 @@
     {{ end }}
   </div>
   <div class="product-description">
-    <a class="close" href="javascript:history.back()"><img src={{ "images/icon_close.svg" | relURL }} /></a>
+    <a class="close" href={{ "/" | relURL }}><img src={{ "images/icon_close.svg" | relURL }} /></a>
     <h1>{{ .Title }}</h1>
     {{ .Content }}
     <table>

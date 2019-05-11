@@ -585,9 +585,15 @@ a {
   width: 100%;
 
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   justify-content: space-around;
-  align-items: flex-start;
+  align-items: center;
+
+  @media ( min-width: 500px ) {
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
 
   border-top: 1px solid $primary;
 
@@ -596,14 +602,19 @@ a {
   font-size: 1.3rem;
 
   .footer-box {
-    margin-top: 30px;
-    margin-bottom: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
 
     height: 80px;
+
+    @media ( min-width: 500px ) {
+      margin-top: 30px;
+      margin-bottom: 60px;
+    }
 
     input {
       border: 2px solid $primary;
