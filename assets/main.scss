@@ -419,6 +419,7 @@ a {
 // Container
 
 .container {
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -426,6 +427,32 @@ a {
 
   max-width: 1000px;
   margin: 0 10px 0 10px;
+}
+
+.side-text {
+  display: none;
+  @media ( min-width: 1080px ) {
+    display: block;
+  }
+
+  color: $primary;
+  font-size: 14pt;
+}
+
+.side-text-left {
+  position: absolute;
+  transform: rotate(270deg);
+
+  top: 400px;
+  left: -130px;
+}
+
+.side-text-right {
+  position: absolute;
+  transform: rotate(90deg);
+
+  bottom: 300px;
+  right: -110px;
 }
 
 // Header
