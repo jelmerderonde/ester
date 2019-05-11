@@ -5,7 +5,7 @@
     <title>Ester</title>
     
     
-    <link rel="stylesheet" href="//jelmerderonde.github.io/ester/main.7a8527a1d842f999af2aef470a3dae7d1db044c8d4cc2d58dac4cd2732b58c8b.css">
+    <link rel="stylesheet" href="//jelmerderonde.github.io/ester/main.0ad89c968dd247344b2b95ddf78ad46abda55f9625064ade97bbc7ed2af954a5.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" id="snipcart" data-api-key="YjI1YTA2MjQtMGU3ZC00ZmY4LTllNzQtNmVlODVjYTg3MmIxNjM2ODA4OTQxMjU1ODAyMTM5"></script>
     <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" type="text/css" rel="stylesheet" />
@@ -37,6 +37,31 @@
     
   
   <a href="#" class="snipcart-checkout">winkelwagen<div class="snipcart-summary"><span class="snipcart-total-items"></span></div></a>
+  <div id="hamburger">
+    <img src=/ester/images/hamburger.svg />
+  </div>
+  <div id="navbar-menu">
+    <div class="menu-box">
+      <img id="mobile-menu-close" src=/ester/images/icon_close.svg />
+      
+        
+          <a href="/ester/" class="">sieraden</a>
+        
+      
+        
+          <a href="/ester/over-ester/" class="is-active">over ester</a>
+        
+      
+        
+        
+      
+        
+          <a href="/ester/contact/" class="">contact</a>
+        
+      
+      <a href="#" class="snipcart-checkout">winkelwagen<div class="snipcart-summary"><span class="snipcart-total-items"></span></div></a>
+    </div>
+  </div>
 </nav>
 
       </div>
@@ -81,5 +106,14 @@ nusdae aut entibusanda conecti cupti. etur moluptur rem as exernam re sus, tenim
 </div>
 
     </div>
+    <script type="text/javascript">
+      $("#hamburger").click(function(){
+        $("#navbar-menu").show();
+      });
+
+      $("#mobile-menu-close").click(function(){
+        $("#navbar-menu").hide();
+      });
+    </script>
   </body>
 </html>
