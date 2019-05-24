@@ -46,5 +46,14 @@
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Faucibus pulvinar elementum integer enim neque volutpat. Massa tincidunt dui ut ornare lectus.</description>
     </item>
     
+    <item>
+      <title>Nieuw sieraad</title>
+      <link>//jelmerderonde.github.io/ester/product/nieuw-sieraad/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//jelmerderonde.github.io/ester/product/nieuw-sieraad/</guid>
+      <description>Dit prachtige sieraad is gemaakt van platinum.</description>
+    </item>
+    
   </channel>
 </rss>
