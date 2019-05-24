@@ -1,5 +1,4 @@
 +++
-draft = true
 extra_images = ["/ester/uploads/1070_main/2019/05/24.jpg"]
 image = "/ester/uploads/1070_main/2019/05/24.jpg"
 material = "platinum"
