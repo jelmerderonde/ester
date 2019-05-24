@@ -475,7 +475,7 @@ a {
 
   position: relative;
 
-  @media ( min-width: 500px ) {
+  @media ( min-width: 530px ) {
     flex-flow: row nowrap;
     justify-content: center;
     align-items: flex-end;
@@ -497,7 +497,7 @@ a {
     margin: 0;
   }
 
-  @media ( min-width: 500px ) {
+  @media ( min-width: 530px ) {
     display: none;
   }
 }
@@ -539,7 +539,7 @@ a {
     }
   }
 
-  @media ( min-width: 500px ) {
+  @media ( min-width: 530px ) {
     display: none;
   }
 }
@@ -548,7 +548,7 @@ a {
   height: 3rem;
   margin: 0.75rem 1rem;
 
-  @media ( min-width: 500px ) {
+  @media ( min-width: 530px ) {
     margin: 0.75rem 0;
   }
 
@@ -561,7 +561,7 @@ a {
 .navbar a {
   display: none;
 
-  @media ( min-width: 500px ) {
+  @media ( min-width: 530px ) {
     font-size: 15pt;
     display:inline;
     margin: 0.75rem 0.3rem;
@@ -572,9 +572,11 @@ a {
   }
 
   letter-spacing: 0.08rem;
+  white-space: nowrap;
+
   margin: 0.75rem 1.5rem;
   padding-bottom: 1px;
-  border-bottom: 2px solid $background;
+  border-bottom: 1px solid $background;
   position: relative;
   .snipcart-summary {
     font-size: 12pt;
@@ -641,6 +643,24 @@ a {
     @media ( min-width: 500px ) {
       margin-top: 30px;
       margin-bottom: 60px;
+    }
+
+    .socials {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+
+      a {
+        border: none;
+
+        :active, :hover {
+          border: none;
+        }
+
+        img {
+          width: 30px;
+        }
+      }
     }
 
     input {
