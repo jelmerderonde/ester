@@ -2,7 +2,7 @@
   {{ $currentPage := . }}
   {{ range .Site.Menus.main }}
     {{ if eq .Identifier "logo"}}
-      <img src={{ "images/logo_text.svg" | relURL }}  />
+      <img class="text-logo" src={{ "images/logo_text.svg" | relURL }}  />
     {{ else }}
       <a href="{{ .URL }}" class="{{ if eq $currentPage.RelPermalink .URL }}is-active{{ end }}">{{ .Name }}</a>
     {{ end }}

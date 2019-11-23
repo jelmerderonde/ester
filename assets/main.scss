@@ -347,12 +347,16 @@ template {
 
 // Colors
 $pure-white: #FFFFFF;
-$msu-green: #194B41;
+$dark-green: #115E5C;
+$light-green: #51AEAE;
+$pink: #EBCBCD;
+
 
 // Global variables
 $family-sans-serif: "Mukta", sans-serif;
 $font-weight: 200;
-$primary: $msu-green;
+$primary: $dark-green;
+$secondary: $pink;
 $background: $pure-white;
 $text-padding: 10px 20px 10px 30px;
 
@@ -604,8 +608,8 @@ a {
   border-bottom: 1px solid $primary;
 }
 
-.navbar .logo {
-  margin: 0;
+.navbar .text-logo {
+  margin: 0 0 7px 0;
 }
 
 // Footer
@@ -947,6 +951,11 @@ $grid-gutter: 10px;
     height: auto;
   }
   .grid-hover {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
     position: absolute;
     top: 0;
     left: 0;
@@ -955,15 +964,15 @@ $grid-gutter: 10px;
     z-index: 10;
     box-sizing: border-box;
 
+
+    background-color: inherit;
     opacity: 0;
 
-    padding: 15px;
+    //padding: 15px;
 
     cursor: pointer;
 
     line-height: 1.15;
-    color: $pure-white;
-    background-color: $primary;
 
     transition: opacity 1s ease-in-out;
     -moz-transition: opacity 1s ease-in-out;
@@ -977,25 +986,26 @@ $grid-gutter: 10px;
     }
 
     h2 {
-      color: $pure-white;
-      text-transform: lowercase;
+      color: $primary;
       font-size: 30pt;
-      margin-top: 0px;
+      margin: 0 0 15px 0;
     }
 
     img {
-      position: absolute;
-      bottom: 30px;
 
-      margin: 0;
-      padding: 0;
+      height: 75px;
+      width: 75px;
 
-      margin-left: -15px;
-
-      width: 100%;
-      height: 50px;
     }
   }
+}
+
+.grid-item:nth-child(odd) {
+  background-color: rgba(235,203,205,0.8);
+}
+
+.grid-item:nth-child(even) {
+  background-color: rgba(81,174,174,0.8);
 }
 
 // SNIPCART CUSTOMIZATION
