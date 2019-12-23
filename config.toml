@@ -8,9 +8,9 @@ baseUrl = "//jelmerderonde.github.io/ester/"
   weight     = 1
 
   [[menu.main]]
-  identifier = "over-ester"
-  name       = "over ester"
-  url        = "/over-ester/"
+  identifier = "ander-werk"
+  name       = "ander werk"
+  url        = "/ander-werk/"
   weight     = 2
 
   [[menu.main]]
