@@ -26,6 +26,6 @@ fields:
   name: extra_images
   label: Extra afbeeldingen
 pages:
-- content/product/oorbellen.md
 - content/product/nieuw-sieraad.md
+- content/product/oorbellen.md
 - content/product/zilveren-armband.md
