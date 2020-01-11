@@ -8,6 +8,12 @@ fields:
   description: De titel wordt weergegeven op de ander werk-pagina en bij de detailpagina
   config:
     required: true
+- type: number
+  name: price
+  label: Prijs
+  config:
+    min: '0'
+    required: true
 - type: file
   label: Afbeelding
   name: image

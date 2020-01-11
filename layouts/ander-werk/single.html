@@ -11,6 +11,20 @@
     <a class="close" href={{ "/ander-werk" | relURL }}><img src={{ "images/icon_close.svg" | relURL }} /></a>
     <h1>{{ .Title }}</h1>
     {{ .Content }}
+    <table>
+      <tr>
+        <th>Prijs:</th><td>{{ .Params.price }}</td>
+      </tr>
+    </table>
+    <button
+      class="snipcart-add-item"
+      data-item-id="2"
+      data-item-name="{{ .Params.title }}"
+      data-item-price="{{ .Params.price }}"
+      data-item-url="{{ .Permalink }}">
+        <img src={{ "images/icon_buy.svg" | relURL }} />
+        Ik wil dit werk kopen
+    </button>
   </div>
 </div>
 
